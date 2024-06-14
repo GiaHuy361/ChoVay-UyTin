@@ -45,8 +45,8 @@ input, select {
     margin-top: 0.5em;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;  /* Make inputs and selects full-width */
-    box-sizing: border-box;  /* Include padding and border in element's total width and height */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button {
@@ -86,7 +86,7 @@ address {
     }
 
     h2 {
-        font-size: 1.5em;  /* Adjust font size for smaller screens */
+        font-size: 1.5em;
     }
 
     form {
@@ -100,11 +100,11 @@ address {
 
 @media (max-width: 480px) {
     header {
-        font-size: 1.2em;  /* Adjust header font size for very small screens */
+        font-size: 1.2em;
     }
 
     h2 {
-        font-size: 1.2em;  /* Further adjust font size for very small screens */
+        font-size: 1.2em;
     }
 
     button {
