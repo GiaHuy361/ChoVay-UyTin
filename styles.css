@@ -79,6 +79,13 @@ address {
     font-style: normal;
 }
 
+.images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5em 0;
+}
+
 /* Responsive design adjustments */
 @media (max-width: 768px) {
     header, main, form, .form-section, .info-section, .loan-packages, .contact-section {
