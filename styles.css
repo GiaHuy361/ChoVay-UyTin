@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #008000;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 1em;
+}
+
+.form-section, .info-section, .loan-packages, .contact-section {
+    background-color: white;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #008000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1em;
+}
+
+input, select {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #008000;
+    color: white;
+    padding: 0.7em;
+    border: none;
+    border-radius: 4px;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #006400;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f9f9f9;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 4px;
+}
+
+address {
+    font-style: normal;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
