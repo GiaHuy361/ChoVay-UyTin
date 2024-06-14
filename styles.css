@@ -42,6 +42,8 @@ input, select {
     margin-top: 0.5em;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;  /* Make inputs and selects full-width */
+    box-sizing: border-box;  /* Include padding and border in element's total width and height */
 }
 
 button {
@@ -73,7 +75,36 @@ ul li {
 address {
     font-style: normal;
 }
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    header, main, form, .form-section, .info-section, .loan-packages, .contact-section {
+        padding: 0.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;  /* Adjust font size for smaller screens */
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    button {
+        padding: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.2em;  /* Adjust header font size for very small screens */
+    }
+
+    h2 {
+        font-size: 1.2em;  /* Further adjust font size for very small screens */
+    }
+
+    button {
+        padding: 0.4em;
+    }
 }
