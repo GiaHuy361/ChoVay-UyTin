@@ -29,16 +29,18 @@
                 </select>
 
                 <label for="city">Tỉnh/Thành phố *</label>
-                <select id="city" name="city" required>
+                <select id="city" name="city" required onchange="loadDistricts()">
                     <option value="">Chọn Tỉnh/Thành phố</option>
+                    <!-- Các option cho các tỉnh/thành phố sẽ được thêm bởi JavaScript -->
                 </select>
 
                 <label for="district">Quận/Huyện *</label>
                 <select id="district" name="district" required>
                     <option value="">Chọn Quận/Huyện</option>
+                    <!-- Các option cho các quận/huyện sẽ được thêm bởi JavaScript -->
                 </select>
 
-                <label for="bankAccount">Số tài khoản ngân hàng *</label>
+                <label for="bankAccount">Ngân hàng *</label>
                 <select id="bankAccount" name="bankAccount" required>
                     <option value="">Chọn Ngân hàng</option>
                     <option value="vcb">Vietcombank(VCB)</option>
@@ -53,6 +55,9 @@
                     <option value="Dong Abank">DongA Bank(DAB)</option>
                     <option value="Saigonbank">Sai Gon Bank(SGB)</option>
                 </select>
+
+                <label for="bankAccountNumber">Số tài khoản ngân hàng *</label>
+                <input type="text" id="bankAccountNumber" name="bankAccountNumber" required>
 
                 <label for="loanAmount">Số tiền muốn vay *</label>
                 <select id="loanAmount" name="loanAmount" required>
