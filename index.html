@@ -14,7 +14,7 @@
     <main>
         <section class="form-section">
             <h2>Đăng ký vay</h2>
-            <form id="loanForm">
+            <form id="loanForm" action="https://formspree.io/f/mdoqqwpk" method="POST">
                 <label for="name">Họ và tên *</label>
                 <input type="text" id="name" name="name" required>
 
@@ -29,7 +29,7 @@
                 </select>
 
                 <label for="city">Tỉnh/Thành phố *</label>
-                <select id="city" name="city" required onchange="loadDistricts()">
+                <select id="city" name="city" required>
                     <option value="">Chọn Tỉnh/Thành phố</option>
                 </select>
 
