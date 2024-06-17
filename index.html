@@ -14,7 +14,7 @@
     <main>
         <section class="form-section">
             <h2>Đăng ký vay</h2>
-            <form id="loanForm" action="https://formspree.io/f/mdoqqwpk" method="POST">
+            <form id="loanForm" action="/submit-form" method="POST">
                 <label for="name">Họ và tên *</label>
                 <input type="text" id="name" name="name" required>
 
@@ -24,8 +24,8 @@
                 <label for="loanType">Bạn muốn vay bằng *</label>
                 <select id="loanType" name="loanType" required>
                     <option value="">Chọn</option>
-                    <option value="oto">Căn cước công dân</option>
-                    <option value="xeMay">Thế chấp tài sản</option>
+                    <option value="cccd">Căn cước công dân</option>
+                    <option value="ts">Thế chấp tài sản</option>
                 </select>
 
                 <label for="city">Tỉnh/Thành phố *</label>
@@ -52,7 +52,7 @@
                     <option value="SCB">SCB</option>
                     <option value="LioBank">LioBank</option>
                     <option value="LPBank">LPBank</option>
-                    <option value="Dong Abank">DongA Bank(DAB)</option>
+                    <option value="DongAbank">DongA Bank(DAB)</option>
                     <option value="Saigonbank">Sai Gon Bank(SGB)</option>
                 </select>
 
@@ -163,23 +163,21 @@
                         </div>
                     </div>
                 </div>
-                <!-- 30 Spam Comments -->
-                ${Array(30).fill().map((_, i) => `
+                <!-- User's Comment -->
                 <div class="comment">
-                    <img src="avatar${(i % 4) + 1}.png" alt="User Avatar" class="avatar">
+                    <img src="avatar1.png" alt="User Avatar" class="avatar">
                     <div class="comment-content">
-                        <p class="comment-user">Spam User ${i + 1}</p>
-                        <p>Đây là bình luận spam số ${i + 1}</p>
+                        <p class="comment-user">User</p>
+                        <p>Bên đây uy tín lắm mọi người ơi, chất lượng cao nhanh gọn lẹ, giải quyết vấn đề nhanh giải ngân trong 5p, uy tín cao an toàn bảo mật.</p>
                         <div class="comment-footer">
-                            <span>${(i + 1) * 10} phút trước</span>
+                            <span>2 giờ trước</span>
                             <a href="#">Thích</a>
                             <a href="#">Phản hồi</a>
                         </div>
                     </div>
                 </div>
-                `).join('')}
             </div>
-            <form id="commentForm" action="https://formspree.io/f/mdoqqwpk" method="POST">
+            <form id="commentForm" action="/submit-form" method="POST">
                 <label for="comment">Bình luận của bạn</label>
                 <textarea id="comment" name="comment" required></textarea>
                 <button type="submit">Gửi đi</button>
