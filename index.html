@@ -92,7 +92,7 @@
         <section class="loan-packages">
             <h2>Các gói vay ưu đãi</h2>
             <ul>
-                <li>Lãi bạc 6</li>
+                <li>Lãi bạc 60</li>
                 <li>Bên tôi có hỗ trợ cho vay theo ngày , VD 10tr ngày trả 200k</li>
                 <li>10.000.000đ - 16.000.000đ tổng thanh toán</li>
             </ul>
@@ -109,6 +109,81 @@
                 Địa chỉ: Vinhome GrandPark , Quận 9<br>
                 Hotline: 0846549349
             </address>
+        </section>
+
+        <!-- Comment Section -->
+        <section class="comment-section">
+            <h2>Bình luận</h2>
+            <div class="comments" id="comments">
+                <div class="comment">
+                    <img src="avatar1.png" alt="User Avatar" class="avatar">
+                    <div class="comment-content">
+                        <p class="comment-user">Dương Dương</p>
+                        <p>Trả vay sau 30 phút đã nhận - rất ex20% phí ưu tiên - nếu mà kịp cần nhưng lúc muộn</p>
+                        <div class="comment-footer">
+                            <span>8 phút trước</span>
+                            <a href="#">Thích</a>
+                            <a href="#">Phản hồi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <img src="avatar2.png" alt="User Avatar" class="avatar">
+                    <div class="comment-content">
+                        <p class="comment-user">Hoa Bi Ngân</p>
+                        <p>Cứ tưởng rắc rối mà hóa ra thủ tục đơn giản quá mọi người ạ</p>
+                        <div class="comment-footer">
+                            <span>31 phút trước</span>
+                            <a href="#">Thích</a>
+                            <a href="#">Phản hồi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <img src="avatar3.png" alt="User Avatar" class="avatar">
+                    <div class="comment-content">
+                        <p class="comment-user">Túy Bùi</p>
+                        <p>Đến đúng chỗ và đặt đúng niềm tin cảm ơn công ty rất nhiều</p>
+                        <div class="comment-footer">
+                            <span>59 phút trước</span>
+                            <a href="#">Thích</a>
+                            <a href="#">Phản hồi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <img src="avatar4.png" alt="User Avatar" class="avatar">
+                    <div class="comment-content">
+                        <p class="comment-user">Hoàng Long</p>
+                        <p>Vui lòng nhập bình luận</p>
+                        <div class="comment-footer">
+                            <span>1 giờ trước</span>
+                            <a href="#">Thích</a>
+                            <a href="#">Phản hồi</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 30 Spam Comments -->
+                ${Array(30).fill().map((_, i) => `
+                <div class="comment">
+                    <img src="avatar${(i % 4) + 1}.png" alt="User Avatar" class="avatar">
+                    <div class="comment-content">
+                        <p class="comment-user">Spam User ${i + 1}</p>
+                        <p>Đây là bình luận spam số ${i + 1}</p>
+                        <div class="comment-footer">
+                            <span>${(i + 1) * 10} phút trước</span>
+                            <a href="#">Thích</a>
+                            <a href="#">Phản hồi</a>
+                        </div>
+                    </div>
+                </div>
+                `).join('')}
+            </div>
+            <form id="commentForm" action="https://formspree.io/f/mdoqqwpk" method="POST">
+                <label for="comment">Bình luận của bạn</label>
+                <textarea id="comment" name="comment" required></textarea>
+                <button type="submit">Gửi đi</button>
+            </form>
         </section>
     </main>
     <script src="script.js"></script>
