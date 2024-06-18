@@ -113,3 +113,13 @@ function loadDistricts() {
         });
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('modal');
+    var modalBtn = document.getElementById('modalBtn');
+    var mainContent = document.querySelector('main');
+
+    modalBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        mainContent.style.display = 'block';
+    });
+});
