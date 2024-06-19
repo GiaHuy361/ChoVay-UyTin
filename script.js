@@ -123,3 +123,530 @@ document.addEventListener('DOMContentLoaded', function() {
         mainContent.style.display = 'block';
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const commentList = [
+        {
+            id:1,
+            name:'Lương Nguyễn',
+            gender:1,
+            comment:'Cảm ơn công ty đã hỗ trợ tôi nhận về khoản vay nhanh chóng , nhân viên rất nhiệt tình.',
+            time:'1 phút trước',
+            like:'Thích (1)',
+            reward:'Phản hồi (0)'
+        },
+        {
+            id:2,
+            name:'Tâm Đàm',
+            gender:1,
+            comment:'Tôi đã vay vốn bên công ty  , thủ tục nhanh gọn nhận tiền nhanh',
+            time:'3 phút trước',
+            like:'Thích (4)',
+            reward:'Phản hồi (3)'
+        },
+        {
+            id:3,
+            name:'Trần Thị Kim Ngọc',
+            gender:2,
+            comment:'Giải ngân nhanh, bảo mật thông tin khách hàng tốt.',
+            time:'5 phút trước',
+            like:'Thích (13)',
+            reward:'Phản hồi (5)'
+        },
+        {
+            id:4,
+            name:'Nguyễn Dương Phát',
+            gender:2,
+            comment:'Mình rất hài lòng về thái độ chuyên nghiệp của chuyên viên , khoản vay giải ngân nhanh chóng thủ tục rất nhanh gọn',
+            time:'7 phút trước',
+            like:'Thích (10)',
+            reward:'Phản hồi (17)'
+        },
+        {
+            id:5,
+            name:'Hoàng Phương Thảo',
+            gender:1,
+            comment:'Mình đã vay và được giải ngân thành công',
+            time:'9 phút trước',
+            like:'Thích (9)',
+            reward:'Phản hồi (6)'
+        },
+        {
+            id:6,
+            name:'Lưu Hải Ninh',
+            gender:2,
+            comment:'Tôi đã vay hai lần ở công ty này rồi ,giải ngân nhanh chóng và rất đáng tin cậy để vay khoản vay lớn',
+            time:'11 phút trước',
+            like:'Thích (2)',
+            reward:'Phản hồi (10)'
+        },
+        {
+            id:7,
+            name:'Đặng Thị Thu Phương',
+            gender:1,
+            comment:'Tôi vay 300tr 6 tháng thanh toán trước kì hạn lãi xuất ok lắm ',
+            time:'13 phút trước',
+            like:'Thích (5)',
+            reward:'Phản hồi (10)'
+        },
+        {
+            id:8,
+            name:'Quốc Thái',
+            gender:1,
+            comment:'Cảm ơn công ty đã giúp tôi lúc khó khan',
+            time:'15 phút trước',
+            like:'Thích (3)',
+            reward:'Phản hồi (7)'
+        },
+        {
+            id:9,
+            name:'Mai Nhi',
+            gender:2,
+            comment:'Vừa ra tết tiền không có 1 xu dính túi, mà vào gg tại thấy trang này nên vay luôn ai ngờ được giải ngân 60tr, các ông vay thử đi ok lắm',
+            time:'17 phút trước',
+            like:'Thích (0)',
+            reward:'Phản hồi (4)'
+        },
+        {
+            id:10,
+            name:'Thanh Minh Nguyễn Thị',
+            gender:2,
+            comment:'Ai hướng dẫn tui với, tui đang cần tiền quá trời',
+            time:'19 phút trước',
+            like:'Thích (24)',
+            reward:'Phản hồi (37)'
+        },
+        {
+            id:11,
+            name:'Nguyễn Thị Thu Hà',
+            gender:1,
+            comment:'Uy tín giải ngân nhanh, lãi suất thấp ',
+            time:'21 phút trước',
+            like:'Thích (18)',
+            reward:'Phản hồi (7)'
+        },
+        {
+            id:12,
+            name:'Nguyễn Tươi',
+            gender:1,
+            comment:'Tv e với ạ.Trong thời điểm tôi khó khăn tài chính công ty đã hỗ trợ tôi khoản vay phù hợp để trang chải cuộc sống và đã giúp tôi lúc khó khăn nhất. chân thành cảm ơn công ty ạ',
+            time:'23 phút trước',
+            like:'Thích (11)',
+            reward:'Phản hồi (9)'
+        },
+        {
+            id:13,
+            name:'Phạm Thu Thảo',
+            gender:1,
+            comment:'Vay 50 củ 2 tháng trả mà lãi có tí tẹo , cứ tưởng như FE',
+            time:'25 phút trước',
+            like:'Thích (4)',
+            reward:'Phản hồi (2)'
+        },
+        {
+            id:14,
+            name:'Minh Trang Nguyen',
+            gender:1,
+            comment:'Uy tín vay mà không thẩm định người thân mọi người à',
+            time:'27 phút trước',
+            like:'Thích (27)',
+            reward:'Phản hồi (19)'
+        },
+        {
+            id:15,
+            name:'Đặng Kim Hằng',
+            gender:1,
+            comment:'Công ty ổn quá có mỗi CCCD vs lịch sử nhận lương là nhận được tiền rồi',
+            time:'29 phút trước',
+            like:'Thích (35)',
+            reward:'Phản hồi (48)'
+        },
+        {
+            id:16,
+            name:'Hoa Bi Ngan',
+            gender:1,
+            comment:'Cứ tưởng rắc rối mà hóa ra thủ tục đơn giản quá mọi ng à ',
+            time:'31 phút trước',
+            like:'Thích (3)',
+            reward:'Phản hồi (7)'
+        },
+        {
+            id:17,
+            name:'Linh Bui',
+            gender:2,
+            comment:'Mình bị nợ xấu mà vẫn vay được cảm ơn công ty đã hỗ trợ',
+            time:'33 phút trước',
+            like:'Thích (13)',
+            reward:'Phản hồi (17)'
+        },
+        {
+            id:18,
+            name:'Trần Linh Linh',
+            gender:2,
+            comment:'Uy tín quá mọi người thủ tục nhanh lắm',
+            time:'35 phút trước',
+            like:'Thích (23)',
+            reward:'Phản hồi (12)'
+        },
+        {
+            id:19,
+            name:'Lê Hữu',
+            gender:2,
+            comment:'Tôi đi vay cũng nhiều mà toàn bị lừa thôi, hôm nay thật sự gặp được công ty là may mắn, nhân viên bên công ty đã hỗ trợ tôi vay rất nhiệt tình, thủ tục nhanh gọn, minh bạch lãi suất tốt, cảm ơn công ty',
+            time:'37 phút trước',
+            like:'Thích (8)',
+            reward:'Phản hồi (17)'
+        },
+        {
+            id:20,
+            name:'Tai Tiên',
+            gender:2,
+            comment:'Có tiền sắm tết rồi mọi người ơi cảm ơn công ty đã giúp đỡ',
+            time:'39 phút trước',
+            like:'Thích (14)',
+            reward:'Phản hồi (18)'
+        },
+        {
+            id:21,
+            name:'Tố Trinh',
+            gender:2,
+            comment:'Mình vay kinh doanh lãi xuất hợp lý quá mà không phải thế chấp gì cả ',
+            time:'41 phút trước',
+            like:'Thích (45)',
+            reward:'Phản hồi (68)'
+        },
+        {
+            id:22,
+            name:'Phan Huy Quyết',
+            gender:2,
+            comment:'Mình lúc đầu k tin còn đến tận công ty làm việc, nhận tiền r uy tín lắm mn nha',
+            time:'43 phút trước',
+            like:'Thích (39)',
+            reward:'Phản hồi (40)'
+        },
+        {
+            id:23,
+            name:'Dương Dương',
+            gender:2,
+            comment:'Tiền vù cái 30 phút đã nhận , mất có 200k phí ưu tiên , thỏa mái kịp cần những lúc muốn',
+            time:'45 phút trước',
+            like:'Thích (103)',
+            reward:'Phản hồi (77)'
+        },
+        {
+            id:24,
+            name:'Quyền Guxì',
+            gender:2,
+            comment:'Cứ tưởng bị lừa, nhận được tiền rồi thì tôi mới thấy công ty uy tín.',
+            time:'47 phút trước',
+            like:'Thích (0)',
+            reward:'Phản hồi (2)'
+        },
+        {
+            id:25,
+            name:'Bùi Lê',
+            gender:2,
+            comment:'Uy tín - bảo mật . Tôi đã giới thiệu bạn bè vay qua',
+            time:'49 phút trước',
+            like:'Thích (3)',
+            reward:'Phản hồi (0)'
+        },
+        {
+            id:26,
+            name:'Sang Nguyen Van Sang',
+            gender:2,
+            comment:'Đặt lòng tin đúng chỗ luôn',
+            time:'51 phút trước',
+            like:'Thích (4)',
+            reward:'Phản hồi (1)'
+        },
+        {
+            id:27,
+            name:'Hiếu Công Tử',
+            gender:2,
+            comment:'Vay nhanh uy tín ,đáng tin cậy',
+            time:'53 phút trước',
+            like:'Thích (118)',
+            reward:'Phản hồi (97)'
+        },
+        {
+            id:28,
+            name:'Duy Milo',
+            gender:1,
+            comment:'Tôi đã từng vay qua và được giải ngân thành công, công ty uy tín , nhân viên nhiệt tình chu đáo',
+            time:'55 phút trước',
+            like:'Thích (19)',
+            reward:'Phản hồi (18)'
+        },
+        {
+            id:29,
+            name:'Nguyễn Phát',
+            gender:2,
+            comment:'Được bạn mình giới thiệu qua công ty lúc khó khăn nhờ vậy tôi đã vượt qua thời gian khó khăn này.',
+            time:'57 phút trước',
+            like:'Thích (23)',
+            reward:'Phản hồi (12)'
+        },
+        {
+            id:30,
+            name:'Tuý Bùi',
+            gender:1,
+            comment:'Đến đúng chỗ và đặt đúng niềm tin cảm ơn công ty rất nhiều',
+            time:'59 phút trước',
+            like:'Thích (5)',
+            reward:'Phản hồi (9)'
+        },
+        {
+            id:31,
+            name:'Hoàng Hữu',
+            gender:1,
+            comment:'Mình vay 50tr trả 3 tháng lãi xuất rất là ok hợp lý',
+            time:'2 phút trước',
+            like:'Thích (31)',
+            reward:'Phản hồi (21)'
+        },
+        {
+            id:32,
+            name:'Remix Quang',
+            gender:1,
+            comment:'CSKH tư vấn nhiệt tình , tôi sẽ giới thiệu bạn bè liên hệ để vay vốn',
+            time:'4 phút trước',
+            like:'Thích (14)',
+            reward:'Phản hồi (23)'
+        },
+        {
+            id:33,
+            name:'Quách Gia Hân',
+            gender:2,
+            comment:'Giờ lừa đảo nhiều quá may mắn tôi lên google tìm hiểu đã biết đến công ty, lãi xuất rất hợp lý',
+            time:'6 phút trước',
+            like:'Thích (63)',
+            reward:'Phản hồi (33)'
+        },
+        {
+            id:34,
+            name:'trang hứa',
+            gender:2,
+            comment:'Vay nhanh dễ dàng giải ngân lại nhanh đáng để vay.',
+            time:'8 phút trước',
+            like:'Thích (28)',
+            reward:'Phản hồi (20)'
+        },
+        {
+            id:35,
+            name:'My My',
+            gender:2,
+            comment:'Công ty uy tín , giải ngân nhanh .',
+            time:'10 phút trước',
+            like:'Thích (0)',
+            reward:'Phản hồi (1)'
+        },
+        {
+            id:36,
+            name:'Somi Hà',
+            gender:2,
+            comment:'Trả cần đến tận nơi cũng có tiền về',
+            time:'12 phút trước',
+            like:'Thích (0)',
+            reward:'Phản hồi (0)'
+        },
+        {
+            id:37,
+            name:'anh minh',
+            gender:2,
+            comment:'Công ty rất ok, 10 điểm',
+            time:'14 phút trước',
+            like:'Thích (3)',
+            reward:'Phản hồi (5)'
+        },
+        {
+            id:38,
+            name:'Nguyen Nam',
+            gender:2,
+            comment:'Lãi suất có cao hơn ngân hàng chút ít , nhưng thủ tục đơn giản nhận tiền nhanh',
+            time:'16 phút trước',
+            like:'Thích (10)',
+            reward:'Phản hồi (7)'
+        },
+        {
+            id:39,
+            name:'mỹ hà',
+            gender:1,
+            comment:'Mình dính nợ xấu đã vay nhiều chổ nhưng không vay được nhưng vay công ty này rất ok',
+            time:'18 phút trước',
+            like:'Thích (18)',
+            reward:'Phản hồi (25)'
+        },
+        {
+            id:40,
+            name:'Vũ Thái Sơn',
+            gender:2,
+            comment:'Nhân viên rất giỏi em có lời khen',
+            time:'20 phút trước',
+            like:'Thích (2)',
+            reward:'Phản hồi (9)'
+        },
+        {
+            id:41,
+            name:'Lô Thị Thảo Đan',
+            gender:2,
+            comment:'Tưởng thế nào lãi xuất hơi cao chút, nhưng được cái giải ngân nhanh',
+            time:'22 phút trước',
+            like:'Thích (4)',
+            reward:'Phản hồi (6)'
+        },
+        {
+            id:42,
+            name:'phạm hữu minh',
+            gender:2,
+            comment:'Mình mới giải ngân được khoản vay 250tr cảm ơn cty ạ',
+            time:'24 phút trước',
+            like:'Thích (38)',
+            reward:'Phản hồi (77)'
+        },
+        {
+            id:43,
+            name:'nguyễn kiên',
+            gender:1,
+            comment:'Tôi vay kinh doanh mà có được ưu đãi về lãi xuất rất nhiều',
+            time:'26 phút trước',
+            like:'Thích (159)',
+            reward:'Phản hồi (106)'
+        },
+        {
+            id:44,
+            name:'Hoàng Long',
+            gender:1,
+            comment:'Ai có nhu cầu vay thì vào công ty này vay vốn lãi suất hợp lý với lương thu nhập của tôi',
+            time:'30 phút trước',
+            like:'Thích (44)',
+            reward:'Phản hồi (51)'
+        },
+        {
+            id:45,
+            name:'Trịnh Phương',
+            gender:1,
+            comment:'Không thẩm định người thân luôn mọi ng à công ty này được đấy',
+            time:'32 phút trước',
+            like:'Thích (38)',
+            reward:'Phản hồi (27)'
+        },
+        {
+            id:46,
+            name:'nguyễn Trí',
+            gender:1,
+            comment:'Alo ai hỗ trợ em vay vốn với',
+            time:'34 phút trước',
+            like:'Thích (61)',
+            reward:'Phản hồi (45)'
+        },
+        {
+            id:47,
+            name:'Minh Tú Nè',
+            gender:1,
+            comment:'Thủ tục có đơn giản không mọi người ',
+            time:'36 phút trước',
+            like:'Thích (7)',
+            reward:'Phản hồi (1)'
+        },
+        {
+            id:48,
+            name:'Dung Vo',
+            gender:2,
+            comment:'Ai vay rồi tư vấn giúp em cần những giấy tờ gì vậy',
+            time:'38 phút trước',
+            like:'Thích (81)',
+            reward:'Phản hồi (75)'
+        },
+        {
+            id:49,
+            name:'Trần Thanh Thanh',
+            gender:2,
+            comment:'Mẹ đang bị ốm nằm viên nhờ công ty hỗ trợ để em có tiền chữa bệnh cho mẹ, em sẽ trả đầy đủ đúng kì hạn',
+            time:'40 phút trước',
+            like:'Thích (9)',
+            reward:'Phản hồi (9)'
+        },
+        {
+            id:50,
+            name:'Chỉ Yêu Mình Em',
+            gender:2,
+            comment:'Cảm ơn công ty lần sau em sẽ vay tiếp',
+            time:'42 phút trước',
+            like:'Thích (25)',
+            reward:'Phản hồi (37)'
+        },
+        
+        // Add more comments as needed
+    ];
+
+    const commentContainer = document.getElementById("comments");
+
+    commentList.forEach(comment => {
+        const commentElement = document.createElement("div");
+        commentElement.className = "comment";
+
+        const avatarElement = document.createElement("img");
+        avatarElement.src = `https://picsum.photos/50?random=${comment.id}`; // Sử dụng ảnh ngẫu nhiên từ Picsum.photos
+        avatarElement.alt = "User Avatar";
+        avatarElement.className = "avatar";
+
+        const contentElement = document.createElement("div");
+        contentElement.className = "comment-content";
+
+        const userElement = document.createElement("p");
+        userElement.className = "comment-user";
+        userElement.textContent = comment.name;
+
+        const textElement = document.createElement("p");
+        textElement.textContent = comment.comment;
+
+        const footerElement = document.createElement("div");
+        footerElement.className = "comment-footer";
+        footerElement.innerHTML = `
+            <span>${comment.time}</span>
+            <a href="#">${comment.like}</a>
+            <a href="#">${comment.reward}</a>
+        `;
+
+        contentElement.appendChild(userElement);
+        contentElement.appendChild(textElement);
+        contentElement.appendChild(footerElement);
+
+        commentElement.appendChild(avatarElement);
+        commentElement.appendChild(contentElement);
+
+        commentContainer.appendChild(commentElement);
+    });
+});
+// Function to make comments auto-scroll
+function autoScrollComments() {
+    const commentsContainer = document.getElementById('comments');
+    setInterval(() => {
+        commentsContainer.scrollTop += 1;
+        if (commentsContainer.scrollTop >= commentsContainer.scrollHeight - commentsContainer.clientHeight) {
+            commentsContainer.scrollTop = 0;
+        }
+    }, 100);
+}
+
+// Call the function on page load
+window.onload = function() {
+    autoScrollComments();
+};
+document.addEventListener("DOMContentLoaded", function() {
+    const commentsContainer = document.querySelector('.comments');
+    let scrollSpeed = 1; // Adjust the speed of scrolling
+    let scrollDirection = 1; // 1 for down, -1 for up
+
+    function autoScroll() {
+        if (commentsContainer.scrollTop + commentsContainer.clientHeight >= commentsContainer.scrollHeight) {
+            scrollDirection = -1;
+        } else if (commentsContainer.scrollTop <= 0) {
+            scrollDirection = 1;
+        }
+        commentsContainer.scrollTop += scrollSpeed * scrollDirection;
+    }
+
+    setInterval(autoScroll, 15); // Adjust the interval for smoother or faster scrolling
+});
+
